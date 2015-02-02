@@ -1,10 +1,15 @@
 {
   "name": "mkbook",
+  "description": "Docments, Markdown to docments or book.",
   "version": "0.0.1",
-  "description": "Markdown转html静态文档挂载中间件",
-  "main": "index.js",
-  "scripts": {
-    "test": "make test"
+  "homepage": "https://github.com/jiuhuan/mkbook",
+  "author": {
+    "name": "jiuhuan",
+    "email": "by11880@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jiuhuan/mkbook.git"
   },
   "dependencies": {
     "jade": "*",
@@ -19,17 +24,16 @@
     "pedding": "*",
     "jscover": "*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:jiuhuan/mkbook.git"
+  "engines": {
+    "node": ">= 0.10.0"
   },
+  "licenses": [{
+    "type": "BSD"
+  }],
   "keywords": [
     "doc",
     "markdown",
     "mkbook"
   ],
-  "author": {
-    "name": "九幻",
-    "email": "by11880@gmail.com"
-  }
+  "main": "index.js"
 }
