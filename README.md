@@ -27,7 +27,7 @@ MKBook
 ### honeycomb使用配置，config.default.yaml
 
 ```
-'/ > @ali/mkbook':
+'/ > mkbook':
   'title'     : '文档中心'              # 文档title
   'layout'    : './stages/doc.jade'    # 文档页面布局
   'defaults'  : './main.md'            # 默认打开的文档
