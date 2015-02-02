@@ -2,9 +2,30 @@
 
 MKBook
 ---------
-九幻<hanbing.hb@alibaba-inc.com>
+作者：九幻 <by11880@gmail.com>
+
+### Markdown文档格式约束 
+
+根目录必须有索引文件`index.md`，如下例：
+
+```
+### 目录
+* [一级标题1](./main.md)
+  * [google](http://www.google.com/doc/doc.md)
+  * [二级标题](./a/a.md)
+  * [二级标题](./a/a.md)
+  * [二级标题](./a/a.md)
+  * [二级标题](./a/a.md)
+    * [三级标题](./a/a.md)
+    * [三级标题](./a/a.md)
+* 一级标题2
+* [一级标题3](./a/a.md)
+* 一级标题4
+* 一级标题5
+```
 
 ### honeycomb使用配置，config.default.yaml
+
 ```
 '/ > @ali/mkbook':
   'title'     : '文档中心'              # 文档title
@@ -16,6 +37,7 @@ MKBook
 ```
 
 ### connect 使用
+
 ```
 var app = connect();
 var options = {
@@ -25,9 +47,13 @@ var options = {
 app.use(mkbook(options).middleware())
 ```
 
-### 模板变量（基于jade）：
+### 模板变量（基于jade）:
 
 - `doc_title` 文档标题
 - `css_markdown` markdown默认的github风格样本
 - `doc_index` 文档目录
 - `doc_content` 文档内容
+
+###  运行实例
+
+`> node ./example/app.js`

@@ -3,10 +3,7 @@
   "description": "Docments, Markdown to docments or book.",
   "version": "0.0.1",
   "homepage": "https://github.com/jiuhuan/mkbook",
-  "author": {
-    "name": "jiuhuan",
-    "email": "by11880@gmail.com"
-  },
+  "author": "jiuhuan <by11880@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git@github.com:jiuhuan/mkbook.git"
@@ -27,13 +24,22 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "licenses": [{
-    "type": "BSD"
-  }],
   "keywords": [
     "doc",
     "markdown",
     "mkbook"
   ],
-  "main": "index.js"
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/jiuhuan/mkbook/issues"
+  },
+  "directories": {
+    "doc": "doc",
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "license": "BSD"
 }
