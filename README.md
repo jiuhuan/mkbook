@@ -4,6 +4,10 @@ MKBook
 ---------
 作者：九幻 <by11880@gmail.com>
 
+### 安装
+
+`> npm install mkbook`
+
 ### Markdown文档格式约束 
 
 根目录必须有索引文件`index.md`，如下例：
