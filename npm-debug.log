@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.23
+3 info using node@v0.10.31
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/hanbing/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/hanbing/.npm/mkbook/0.0.1/package.tgz', '.' ]
+11 verbose tarball /Users/hanbing/.npm/mkbook/0.0.1/package.tgz
+12 verbose folder .
+13 info prepublish mkbook@0.0.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/hanbing/.npm/1f1177db-tar.lock
+16 silly lockFile ca97dacf-ing-npm-mkbook-0-0-1-package-tgz tar:///Users/hanbing/.npm/mkbook/0.0.1/package.tgz
+17 verbose lock tar:///Users/hanbing/.npm/mkbook/0.0.1/package.tgz /Users/hanbing/.npm/ca97dacf-ing-npm-mkbook-0-0-1-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile ca97dacf-ing-npm-mkbook-0-0-1-package-tgz tar:///Users/hanbing/.npm/mkbook/0.0.1/package.tgz
+21 silly lockFile ca97dacf-ing-npm-mkbook-0-0-1-package-tgz tar:///Users/hanbing/.npm/mkbook/0.0.1/package.tgz
+22 silly lockFile 58aa1038-hanbing-npm-mkbook-0-0-1-package /Users/hanbing/.npm/mkbook/0.0.1/package
+23 verbose lock /Users/hanbing/.npm/mkbook/0.0.1/package /Users/hanbing/.npm/58aa1038-hanbing-npm-mkbook-0-0-1-package.lock
+24 silly lockFile 58aa1038-hanbing-npm-mkbook-0-0-1-package /Users/hanbing/.npm/mkbook/0.0.1/package
+25 silly lockFile 58aa1038-hanbing-npm-mkbook-0-0-1-package /Users/hanbing/.npm/mkbook/0.0.1/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'mkbook',
+28 silly publish   version: '0.0.1',
+28 silly publish   description: 'Markdown转html静态文档挂载中间件',
+28 silly publish   main: 'index.js',
+28 silly publish   scripts: { test: 'make test' },
+28 silly publish   dependencies: { jade: '*', marked: '*', 'coffee-script': '1.8.0' },
+28 silly publish   devDependencies:
+28 silly publish    { connect: '*',
+28 silly publish      should: '*',
+28 silly publish      mocha: '*',
+28 silly publish      supertest: '*',
+28 silly publish      pedding: '*',
+28 silly publish      jscover: '*' },
+28 silly publish   repository: { type: 'git', url: 'git@github.com:jiuhuan/mkbook.git' },
+28 silly publish   keywords: [ 'doc', 'markdown', 'mkbook' ],
+28 silly publish   author: { name: '九幻', email: 'by11880@gmail.com' },
+28 silly publish   readme: '![MKBook](http://gtms02.alicdn.com/tps/i2/TB1aiz1HXXXXXbxXXXX2SziLXXX-266-69.png)\r\n\r\nMKBook\r\n---------\r\n九幻<hanbing.hb@alibaba-inc.com>\r\n\r\n### honeycomb使用配置，config.default.yaml\r\n```\r\n\'/ > @ali/mkbook\':\r\n  \'title\'     : \'文档中心\'              # 文档title\r\n  \'layout\'    : \'./stages/doc.jade\'    # 文档页面布局\r\n  \'defaults\'  : \'./main.md\'            # 默认打开的文档\r\n  \'dir\'       : \'./doc\'                # 文档源目录\r\n  \'mode\'      : \'html\'                 # 渲染模式\r\n  \'url_base\'  : \'/\'                    # url的base路径\r\n```\r\n\r\n### connect 使用\r\n```\r\nvar app = connect();\r\nvar options = {\r\n  title: \'文档中心\',\r\n  defaults: \'./main.md\'\r\n};\r\napp.use(mkbook(options).middleware())\r\n```\r\n\r\n### 模板变量（基于jade）：\r\n\r\n- `doc_title` 文档标题\r\n- `css_markdown` markdown默认的github风格样本\r\n- `doc_index` 文档目录\r\n- `doc_content` 文档内容\r\n',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: '20a4fd1830d7d9c29963a616a4316e6183e656ec',
+28 silly publish   bugs: { url: 'https://github.com/jiuhuan/mkbook/issues' },
+28 silly publish   homepage: 'https://github.com/jiuhuan/mkbook',
+28 silly publish   _id: 'mkbook@0.0.1',
+28 silly publish   _shasum: '8b5b056414de76c5421f7709592cb7b206150498',
+28 silly publish   _from: '.' }
+29 error need auth auth and email required for publishing
+29 error need auth You need to authorize this machine using `npm adduser`
+30 error System Darwin 14.0.0
+31 error command "node" "/usr/local/bin/npm" "publish"
+32 error cwd /Users/hanbing/works/github/mkbook
+33 error node -v v0.10.31
+34 error npm -v 1.4.23
+35 error code ENEEDAUTH
+36 verbose exit [ 1, true ]
