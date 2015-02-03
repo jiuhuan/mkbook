@@ -117,9 +117,17 @@ class Mkbook extends events.EventEmitter
       res.status = 404
       res.end null
 
+  _decodeURIComponent: (str)->
+    try
+      str = decodeURIComponent str
+    catch e
+    str
+
   middleware: ()->
     (req, res, next)=>
       {url, originalUrl} = req
+      url = @_decodeURIComponent url
+      originalUrl = @_decodeURIComponent originalUrl
       # 自动获取DOC根目录
       unless @options.url_base
         if '/' is url
