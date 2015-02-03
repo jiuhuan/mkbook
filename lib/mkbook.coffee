@@ -11,7 +11,7 @@ path = require 'path'
 fs = require 'fs'
 marked = require 'marked'
 
-root_path = '../../../'
+root_path = path.join __dirname, '../../../'
 
 class Mkbook extends events.EventEmitter
   constructor: (options) ->
@@ -19,12 +19,12 @@ class Mkbook extends events.EventEmitter
 
     title = 'Docments' unless title
     if layout
-      layout = path.join __dirname, root_path, layout
+      layout = path.resolve root_path, layout
     else
       layout = path.join __dirname, '../public/layout.jade'
 
     if dir
-      dir = path.join __dirname, root_path, dir
+      dir = path.resolve root_path, dir
     else
       dir = path.join __dirname, '../doc'
 
