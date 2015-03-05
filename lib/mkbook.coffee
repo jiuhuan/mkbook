@@ -10,6 +10,7 @@ events = require 'events'
 path = require 'path'
 fs = require 'fs'
 marked = require 'marked'
+globalUrl = require 'url'
 
 root_path = path.join __dirname, '../../../'
 
@@ -133,9 +134,10 @@ class Mkbook extends events.EventEmitter
         if '/' is url
           url_base = originalUrl
         else
-          url_base = originalUrl.substring originalUrl.length - url.length, -1
+          url_base = originalUrl.substring(originalUrl.length - url.length, -1) or '/'
         @options.url_base = url_base
       # ...
+      url = globalUrl.parse(url).pathname
       extname = path.extname url
       if '.html' is extname
         data = @parse url.replace '.html', '.md'
