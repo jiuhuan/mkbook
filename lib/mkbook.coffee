@@ -128,16 +128,17 @@ class Mkbook extends events.EventEmitter
     (req, res, next)=>
       {url, originalUrl} = req
       url = @_decodeURIComponent url
+      url = globalUrl.parse(url).pathname
       originalUrl = @_decodeURIComponent originalUrl
+      originalUrl = globalUrl.parse(originalUrl).pathname
       # 自动获取DOC根目录
       unless @options.url_base
         if '/' is url
           url_base = originalUrl
         else
-          url_base = originalUrl.substring(originalUrl.length - url.length, -1) or '/'
-        @options.url_base = url_base
+          url_base = originalUrl.substring(originalUrl.length - url.length + 1, -1)
+        @options.url_base = url_base or '/'
       # ...
-      url = globalUrl.parse(url).pathname
       extname = path.extname url
       if '.html' is extname
         data = @parse url.replace '.html', '.md'
